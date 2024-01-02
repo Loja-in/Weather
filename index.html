@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="shortcut icon" href="img/weathercock.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Wellfleet&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="container">
+        <form action="#" id="form">
+            <input type="text" class="search" placeholder="Enter city name...">
+            <button type="submit" class="btn" id="Enter"><img src="img/loupe.png"></button>
+        </form>
+        <div class="details">                
+            <h1 id="temp">20°C</h1>
+                <h2 id="citty">
+                    paris
+                </h2>
+        </div>
+        <div class="section">
+            <div class="article">
+                <img src="img/humidity.png" id="icon">
+                <div class="weather-details">
+                    <p>
+                    <span id="humidity">50%</span>
+                    </p>
+                </div>
+            </div>
+            <div class="article">
+                <img src="img/rainy-day.png" id="temp-icon">
+                <div class="weather-details">
+                    <p>
+                    <span id="description">Rainy</span>
+                    </p>
+                </div>
+            </div>
+            <div class="article">
+                <img src="img/storm.png" id="icon">
+                <div class="weather-details">
+                    <p>
+                    <span id="wind">10 km/h</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>
+                Coded by <a href="">Lojain Nasr</a>,
+                on <a href="https://github.com/Loja-in">GitHub</a>
+                and Hosted on <a href="">Netlify</a>.
+            </p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
