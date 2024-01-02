@@ -59,9 +59,6 @@ body{
     color: #53a8b6;
 
 }
-.details h4{
-    font-size: 1rem;
-}
 .section{
     display: flex;
     justify-content:space-between;
