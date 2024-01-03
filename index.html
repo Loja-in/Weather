@@ -12,11 +12,11 @@
 <body>
     <div class="container">
         <form action="#" id="form">
-            <input type="text" class="search" id="Search" placeholder="Enter city name..." />
+            <input type="text" class="search" id="Search-text" placeholder="Enter city name..." />
             <button type="submit" class="btn" id="enter"><img src="img/loupe.png"></button>
         </form>
         <div class="details">                
-            <h1 id="temp">20°C</h1>
+            <h1><sapn id="temp">20</sapn>°C</h1>
                 <h2 id="city">
                     paris
                 </h2>
@@ -26,12 +26,12 @@
                 <img src="img/humidity.png" id="icon">
                 <div class="weather-details">
                     <p>
-                    <span id="humidity">50%</span>
+                    <span id="humidity">50</span>%
                     </p>
                 </div>
             </div>
             <div class="article">
-                <img src="img/rainy-day.png" id="temp-icon">
+                <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" id="temp-icon">
                 <div class="weather-details">
                     <p>
                     <span id="description">Rainy</span>
@@ -42,7 +42,7 @@
                 <img src="img/storm.png" id="icon">
                 <div class="weather-details">
                     <p>
-                    <span id="wind">10 km/h</span>
+                    <span id="wind">10</span>km/h
                     </p>
                 </div>
             </div>
@@ -50,12 +50,45 @@
         
         <footer>
             <p>
-                Coded by <a href="">Lojain Nasr</a>,
+                Coded by <a href="https://www.shecodes.io/graduates/99170-lojain-nasr">Lojain Nasr</a>,
                 on <a href="https://github.com/Loja-in">GitHub</a>
                 and Hosted on <a href="">Netlify</a>.
             </p>
         </footer>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function search(event) {
+                event.preventDefault();
+                let input = document.querySelector("#Search-text");
+                let h2 = document.querySelector("#city");
+                h2.innerHTML = `${input.value}`;
+                let apiKey = "ec49etfea43b9bf6o7c77b0d49c77081";
+                let city = input.value;
+                let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+                axios.get(apiUrl).then(displayWeather);
+            }
+            function displayWeather(response) {
+                let cityElement = document.querySelector("#city");
+                cityElement.innerHTML = response.data.city;
+                let temperature = document.querySelector("#temp");
+                temperature.innerHTML = Math.round(response.data.temperature.current);
+                let humidity = document.querySelector("#humidity");
+                humidity.innerHTML = Math.round(response.data.temperature.humidity);
+                let wind = document.querySelector("#wind");
+                wind.innerHTML = Math.round(response.data.wind.speed);
+                let description = document.querySelector("#description");
+                description.innerHTML = response.data.condition.description;
+                if (description.innerHTML.length > 10) {
+                    description.style.fontSize = "1.2rem";
+                }
+                let icon = document.querySelector("#temp-icon");
+                icon.innerHTML = response.data.condition.icon_url;
+
+
+            }
+            let searchcity = document.querySelector("#enter");
+            searchcity.addEventListener('click', search);
+
+    </script>
 </body>
 </html>

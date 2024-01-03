@@ -7,7 +7,7 @@ body{
     font-family: 'Wellfleet', monospace;
 }
 .container{
-    width: 40%;
+    width: 50%;
     max-width: 900px;
     box-sizing: border-box;
     background: linear-gradient(109.6deg, rgb(204, 228, 247) 11.2%, rgb(237, 246, 250) 100.2%);
@@ -16,7 +16,7 @@ body{
     padding: 10px;
     text-align: center;
     height: 30%;
-    max-height: 500px;
+    max-height: 800px;
     border-radius: 30px;
 }
 .container form{
@@ -79,7 +79,7 @@ body{
     cursor: pointer;
 }
 .article img{
-    width: 70%;
+    width: 60%;
 }
 .weather-details {
     margin-top: 10px;
