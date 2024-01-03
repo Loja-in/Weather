@@ -19,7 +19,7 @@ function displayWeather(response){
     wind.innerHTML = Math.round(response.data.wind.speed);
     let description = document.querySelector("#description");
     description.innerHTML = response.data.condition.description;
-    if (description.innerHTML.length > 10) {
+    if (description.innerHTML.length > 12) {
         description.style.fontSize = "1.2rem"; 
     }
     let icon = document.querySelector("#temp-icon");
