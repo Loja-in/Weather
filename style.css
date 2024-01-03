@@ -32,6 +32,9 @@ body{
     padding: 25px;
     width: 60%;
 }
+.search:hover{
+    border: 1px dashed #53a8b6;
+}
 .btn{
     outline: 0;
     border: 0;

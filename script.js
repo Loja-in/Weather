@@ -27,5 +27,11 @@ function displayWeather(response){
 
     
 }
+window.addEventListener('load', function() {
+    let apiKey = "ec49etfea43b9bf6o7c77b0d49c77081";
+    let city = "Damascus";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    axios.get(apiUrl).then(displayWeather);
+});
 let searchcity = document.querySelector("#enter");
 searchcity.addEventListener('click', search);
