@@ -22,8 +22,8 @@ function displayWeather(response){
     if (description.innerHTML.length > 10) {
         description.style.fontSize = "1.2rem"; 
     }
-    let icon = document.querySelector("#temp-icon").src;
-    icon.innerHTML = response.data.condition.icon_url;
+    let icon = document.querySelector("#temp-icon");
+    icon.src = response.data.condition.icon_url;
 
     
 }
