@@ -7,7 +7,7 @@ body{
     font-family: 'Wellfleet', monospace;
 }
 .container{
-    width: 50%;
+    width: 60%;
     max-width: 900px;
     box-sizing: border-box;
     background: linear-gradient(109.6deg, rgb(204, 228, 247) 11.2%, rgb(237, 246, 250) 100.2%);
@@ -72,10 +72,9 @@ body{
 .article{
     width: 80%;
     height: 60%;
-    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px; */
     margin: 10px;
     padding: 15px;
-    
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px; */
     /* border-radius: 10px; */
     /* background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
 }
@@ -111,6 +110,13 @@ body{
 .weather-details p{
     color: grey;
     font-size: 1.5rem;
+}
+.forecast{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+
 }
 footer{
     margin-top: 20px;
