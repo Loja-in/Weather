@@ -30,7 +30,7 @@ body{
     border: 0;
     border-radius: 30px;
     padding: 25px;
-    width: 70%;
+    width: 75%;
     font-size: 1rem;
 }
 .search:hover{
@@ -39,8 +39,8 @@ body{
 .btn{
     outline: 0;
     border: 0;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background-color: antiquewhite;
     cursor: pointer;
     padding: 10px;
@@ -115,7 +115,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
+    text-align: center;
+    margin: 30px 20px;
 
 }
 footer{
