@@ -117,7 +117,12 @@ body{
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin: 30px 20px;
+    margin: 40px 30px;
+}
+.cards:hover{
+    transform: scale(1.07);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
 }
 #temperature-min{
     opacity: 0.5;
