@@ -24,8 +24,34 @@ function displayWeather(response){
     }
     let icon = document.querySelector("#temp-icon");
     icon.src = response.data.condition.icon_url;
+    getForecast(response.data.city);
+}
+function getForecast(city){
+    let apiKey = "ec49etfea43b9bf6o7c77b0d49c77081";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+    axios.get(apiUrl).then(displayForecast);
+}
 
-    
+
+function displayForecast(response){
+    console.log(response.data);
+
+    let forecastHtml = "";
+    response.data.daily.forEach(function(day){
+        forecastHtml += `<div class="cards">
+                <h4><span id="day">Tue</span></h4>
+                <div class="degree">
+                    <img src="${day.condition.icon_url}" class="imgForecast">
+                    <p class="temperature">
+                        <span id="temperature-max">${Math.round(day.temperature.maximum)}°</span>
+                        |
+                        <span id="temperature-min">${Math.round(day.temperature.minimum)}°</span>
+                    </p>
+                </div>
+            </div>`
+            let forecast = document.querySelector(".forecast");
+            forecast.innerHTML= forecastHtml;
+    });
 }
 window.addEventListener('load', function() {
     let apiKey = "ec49etfea43b9bf6o7c77b0d49c77081";
@@ -35,3 +61,4 @@ window.addEventListener('load', function() {
 });
 let searchcity = document.querySelector("#enter");
 searchcity.addEventListener('click', search);
+getForecast("paris");
