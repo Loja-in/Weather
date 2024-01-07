@@ -117,7 +117,9 @@ body{
     align-items: center;
     text-align: center;
     margin: 30px 20px;
-
+}
+#temperature-min{
+    opacity: 0.5;
 }
 footer{
     margin-top: 20px;
@@ -132,5 +134,5 @@ footer a{
 }
 footer a:hover{
     color: #ff7e67;
-
 }
+
