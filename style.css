@@ -124,8 +124,15 @@ body{
     transition: all .3s ease-in-out;
     cursor: pointer;
 }
+#day{
+    color: #236f7a;
+}
+#temperature-max{
+    color: #5585b5;
+}
 #temperature-min{
     opacity: 0.5;
+    color: #0f5863;
 }
 footer{
     margin-top: 20px;
