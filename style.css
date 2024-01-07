@@ -129,10 +129,12 @@ body{
 }
 #temperature-max{
     color: #5585b5;
+    font-weight: bold;
 }
 #temperature-min{
     opacity: 0.5;
     color: #0f5863;
+    font-weight: bold;
 }
 footer{
     margin-top: 20px;
@@ -148,4 +150,19 @@ footer a{
 footer a:hover{
     color: #ff7e67;
 }
+@media screen and (max-width: 767px) {
+    .container {
+        width: 95%;
+    }
+}
 
+/* Styles for screens smaller than 480px */
+@media screen and (max-width: 479px) {
+    .container {
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
